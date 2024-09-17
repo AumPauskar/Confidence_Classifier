@@ -39,6 +39,26 @@ git clone https://github.com/Shriram-11/Confidence_Classifier.git
 cd Confidence_Classifier
 ```
 
+### Spin up a Virtual Environment (Optional)
+
+```bash
+python -m venv env
+```
+Activate the virtual environment:
+
+- On Windows (Command Prompt):
+   ```ps1
+   env\Scripts\activate.bat
+   ```
+- On Windows (Powershell):
+   ```ps1
+   .\env\Scripts\Activate.ps1
+   ```
+- On MacOS/Linux:
+   ```bash
+   source env/bin/activate
+   ```
+
 ### Install Dependencies
 
 ```bash
