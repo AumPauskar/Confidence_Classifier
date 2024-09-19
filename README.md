@@ -39,6 +39,26 @@ git clone https://github.com/Shriram-11/Confidence_Classifier.git
 cd Confidence_Classifier
 ```
 
+### Spin up a Virtual Environment (Optional)
+
+```bash
+python -m venv .venv
+```
+Activate the virtual environment:
+
+- On Windows (Command Prompt):
+   ```ps1
+   .venv\Scripts\activate.bat
+   ```
+- On Windows (Powershell):
+   ```ps1
+   .\.venv\Scripts\Activate.ps1
+   ```
+- On MacOS/Linux:
+   ```bash
+   source .venv/bin/activate
+   ```
+
 ### Install Dependencies
 
 ```bash
@@ -53,12 +73,25 @@ python app.py
 
 This will start the Flask server, and you should be able to access the application at `http://127.0.0.1:5000/`.
 
+### Running via docker (tested on Windows)
+Note: Both methods can be followed to run the application (using venv or docker), however, docker is recommended for server deployment.
+
+- Prerequisites
+Make sure you have [docker](https://docs.docker.com/desktop/install/windows-install/) installed
+
+- Build
+   ```ps1
+   docker build -t flask-emotion-app .
+   docker run -p 5000:5000 flask-emotion-app
+   ```
 ### Access the Frontend
 
 1. Open a browser and navigate to `http://127.0.0.1:5000/`.
 2. You can either upload an image or allow the webcam to capture and send images every 5 seconds.
 3. The system will display the detected emotion and a corresponding confidence level.
 
+## Docker Setup
+To check installation via Docker, follow the following [documentation](docs/docker.md)
 ## Emotion-to-Confidence Mapping
 
 The following table shows how emotions are mapped to confidence levels:
@@ -79,6 +112,7 @@ The following table shows how emotions are mapped to confidence levels:
 - **DeepFace**: Used for emotion detection and analysis.
 - **JavaScript**: For handling webcam input and sending image data to the backend.
 - **HTML/CSS**: For the basic structure and styling of the frontend.
+- **Docker**: For containerizing the application.
 
 ## How to Contribute
 
